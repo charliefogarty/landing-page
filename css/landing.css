@@ -1,0 +1,182 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #000633;
+	box-sizing: border-box;
+	color: white;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	text-align: center;
+}
+
+* {
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+input, textarea {
+	outline: none;
+	background: white;
+	resize: none;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+
+div.landing-container {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	padding: 0px 15px;
+	max-width: 470px;
+	margin: auto;
+}
+
+div.landing-header {
+	margin-top: 50px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+
+div.landing-header-logo {
+	height: 64px;
+	width: 136px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	margin: auto;
+}
+
+div.landing-header-logo img {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+h2.landing-header-tagline {
+	font-size: 18px;
+	line-height: 30px;
+	height: 30px;
+	margin-top: 20px;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	letter-spacing: 2px;
+	color: rgba(255,255,255,0.6);
+}
+
+div.landing-body {
+	margin-top: 15px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 220px;
+}
+
+h4.landing-body-tagline {
+	font-size: 18px;
+	line-height: 30px;
+	margin-top: 20px;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	letter-spacing: 2px;
+}
+
+input.landing-input {
+	margin-top: 15px;
+	height: 60px;
+	font-size: 20px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	outline: none;
+	border: 0;
+	background: rgba(255, 255, 255, 0.07);
+	letter-spacing: 1px;
+	color: rgba(255, 255, 255, 0.6);
+	width: 100%;
+	padding: 10px 20px;
+	border-radius: 5px;
+}
+
+div.landing-submit {
+	font-size: 23px;
+	line-height: 60px;
+	height: 60px;
+	margin-top: 15px;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	background-color: #55D4BC;
+	letter-spacing: 1px;
+	width: 100%;
+	transition: background .2s;
+	cursor: pointer;
+}
+
+div.landing-submit.landing-error {
+	background-color: #D73737;
+}
+
+@media (min-width: 500px) {
+	div.landing-header {
+		margin-top: 80px;
+	}
+
+	div.landing-header-logo {
+		height: 80px;
+		width: 170px;
+	}
+
+	div.landing-header-tagline {
+		font-size: 26px;
+		line-height: 40px;
+		height: 40px;
+		margin-top: 30px;
+	}
+
+	div.landing-body {
+		margin-top: 35px;
+	}
+
+	input.landing-input {
+		margin-top: 20px;
+		height: 70px;
+		font-size: 22px;
+	}
+
+	div.landing-submit {
+		font-size: 25px;
+		line-height: 70px;
+		height: 70px;
+		margin-top: 20px;
+	}
+}
