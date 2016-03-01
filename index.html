@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="images/fav.ico">
     <!-- build:cssApp xstyle.css -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="js/signup.js"></script>
     <link rel="stylesheet" href="css/landing.css">
     <!-- endbuild -->
     <script>
@@ -30,17 +32,25 @@
             </h2>
         </div>
         <div class="landing-body">
-            <h4 class="landing-body-tagline">
+            <h4 class="landing-body-tagline" id="landing-info">
                 claim your spot in our private beta
             </h4>
-            <form>
+            <h4 class="landing-body-tagline" id="landing-success">
+                Thanks! Check your inbox to confirm your signup.
+            </h4>
+            <form id="landing-form">
                 <input class="landing-input"
+                    id="landing-input-field" 
                     type="email"
                     placeholder="email"
                     spellcheck="false"
+                    name="EMAIL" 
                     required>
-                <div class="landing-submit">
+                <div id="landing-submit" class="submit-btn">
                     reserve your spot
+                </div>
+                <div id="landing-error" class="submit-btn">
+                    try again
                 </div>
             </form>
         </div>

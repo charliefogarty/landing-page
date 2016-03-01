@@ -11,7 +11,6 @@ body {
 	color: white;
 	position: relative;
 	display: block;
-	overflow: hidden;
 	width: 100%;
 	text-align: center;
 }
@@ -109,8 +108,12 @@ h4.landing-body-tagline {
 	letter-spacing: 2px;
 }
 
+#landing-success {
+	display: none;
+}
+
 input.landing-input {
-	margin-top: 15px;
+	margin-top: 20px;
 	height: 60px;
 	font-size: 20px;
 	display: block;
@@ -126,7 +129,7 @@ input.landing-input {
 	border-radius: 5px;
 }
 
-div.landing-submit {
+div.submit-btn {
 	font-size: 23px;
 	line-height: 60px;
 	height: 60px;
@@ -138,12 +141,12 @@ div.landing-submit {
 	background-color: #55D4BC;
 	letter-spacing: 1px;
 	width: 100%;
-	transition: background .2s;
 	cursor: pointer;
 }
 
-div.landing-submit.landing-error {
+#landing-error {
 	background-color: #D73737;
+	display: none;
 }
 
 @media (min-width: 500px) {
@@ -168,7 +171,7 @@ div.landing-submit.landing-error {
 	}
 
 	input.landing-input {
-		margin-top: 20px;
+		margin-top: 30px;
 		height: 70px;
 		font-size: 22px;
 	}
