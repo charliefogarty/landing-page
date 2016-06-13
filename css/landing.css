@@ -75,22 +75,23 @@ section .container {
 #header-hero {  }
 
 #header-hero h1 {
-	margin-top: 7vh;
+	margin-top: 5vh;
 }
 
 #header-hero h1 img {
+	width: 150px;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	width: 180px;
 }
 
 #header-hero h2 {
+	letter-spacing: 2.61px;
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 	font-weight: 700;
-	letter-spacing: 3.65px;
-	font-size: 28px;
 	line-height: 40px;
-	margin-top: 30px;
 	text-transform: uppercase;
 }
 
@@ -161,23 +162,30 @@ a.beta-login:hover {
 }
 
 #lorem-is-for h1 {
-	font-weight: 700;
 	letter-spacing: 2.84px;
-	font-size: 22px;
+	font-size: 28px;
+	margin-bottom: 30px;
+	font-weight: 700;
 	line-height: 40px;
 	text-transform: uppercase;
-	margin-bottom: 80px;
 }
 
 section.side-by-side {
-	width: 50%;
-	float: left;
-	padding: 0 40px;
-	margin-bottom: 50px;
+	width: 100%;
+	padding: 0;
+	margin-bottom: 30px;
 }
 
 div.side-by-side-separator {
-
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 30px;
+	letter-spacing: 3.87px;
+	font-size: 28px;
+	font-weight: 700;
+	line-height: 40px;
 }
 
 section.side-by-side h2 {
@@ -303,8 +311,8 @@ div.input-toggle {
 }
 
 div.input-toggle-option {
-	width: 165px;
-	font-size: 14px;
+	width: 130px;
+	font-size: 12px;
 	line-height: 38px;
 	height: 40px;
 	border-style: solid;
@@ -321,6 +329,14 @@ div.input-toggle-option {
 	border-radius: 5px;
 	cursor: pointer;
 	vertical-align: middle;
+}
+
+div.input-toggle-option.input-toggle-option-left {
+	margin-right: 5px;
+}
+
+div.input-toggle-option.input-toggle-option-right {
+	margin-left: 5px;
 }
 
 div.input-toggle-option.input-toggle-option-selected, div.input-toggle-option:hover {
@@ -353,7 +369,7 @@ div.input-toggle-option label {
 }
 
 div.input-toggle-middle {
-	display: inline-block;
+	display: none;
 	position: relative;
 	overflow: hidden;
 	height: 40px;
@@ -362,7 +378,7 @@ div.input-toggle-middle {
 	font-weight: 300;
 	font-size: 14px;
 	text-transform: uppercase;
-	padding: 0 30px;
+	padding: 0 20px;
 	letter-spacing: 1.75px;
 }
 
@@ -465,6 +481,20 @@ div.city-full img {
 	width: 100%;
 }
 
+div.city-half {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+
+div.city-half img {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+
 footer {
 	background: #07162A;
 	height: 80px;
@@ -522,7 +552,7 @@ div.footer-social a img {
 	height: 30px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 600px) {
 	.mobile-only {
 		display: none !important;
 	}
@@ -531,10 +561,52 @@ div.footer-social a img {
 		display: block !important;
 	}
 
+	#header-hero h1 {
+		margin-top: 7vh;
+	}
+
+	#header-hero h1 img {
+		width: 180px;
+	}
+
+	#header-hero h2 {
+		letter-spacing: 3.65px;
+		font-size: 28px;
+		margin-top: 30px;
+		margin-bottom: 0;
+	}
+
+	#lorem-is-for h1 {
+		font-size: 28px;
+		margin-bottom: 80px;
+	}
+
+	section.side-by-side {
+		padding: 0 15px;
+		width: 50%;
+		float: left;
+		margin-bottom: 50px;
+	}
+
+	div.input-toggle-option {
+		width: 165px;
+		font-size: 14px;
+	}
+
+	div.input-toggle-middle {
+		display: inline-block;
+	}
+
 	input.floating-input {
 		padding: 20px 20px 10px;
 	}
 	label.floating-input-label {
 		padding: 0 20px;
+	}
+}
+
+@media (min-width: 767px) {
+	section.side-by-side {
+		padding: 0 40px;
 	}
 }

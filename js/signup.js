@@ -21,12 +21,12 @@ $(document).ready(function() {
 		$(this.parentNode).addClass('input-toggle-option-selected');
 	});
 
-	var getBlend = function(r1, g1, b1, a1, r2, g2, b2) {
+	var getBlend = function(color1, color2, percent) {
 		return {
-			r: Math.round(r2 + (r1-r2)*a1),
-			g: Math.round(g2 + (g1-g2)*a1),
-			b: Math.round(b2 + (b1-b2)*a1)
-		}
+			r: Math.round(color1.r * percent + color2.r * (1 - percent)),
+			g: Math.round(color1.g * percent + color2.g * (1 - percent)),
+			b: Math.round(color1.b * percent + color2.b * (1 - percent))
+		};
 	}
 
 	var body = document.body;
@@ -35,7 +35,7 @@ $(document).ready(function() {
 	var signupSection = document.getElementById("early-adopter");
 
 	var rgb1 = {r: 9, g: 21, b: 36};
-	var rgb2 = {r: 95, g: 5, b: 64};
+	var rgb2 = {r: 29, g: 173, b: 155};
 	var rgb3 = {r: 41, g: 210, b: 228};
 	var rgb4 = {r: 255, g: 255, b: 255};
 
@@ -49,22 +49,15 @@ $(document).ready(function() {
 		if (heroBottom >= windowHeight) {
 			resultObj = rgb1;
 		} else if (heroBottom < windowHeight && heroBottom >= 0) {
-			// var step = 1/
-			var topOpacity = heroBottom/windowHeight;
-			var tempObj = getBlend(rgb1.r, rgb1.g, rgb1.b, topOpacity, 255, 255, 255);
-			resultObj = getBlend(rgb2.r, rgb2.g, rgb2.b, 1-topOpacity, tempObj.r, tempObj.g, tempObj.b);
+			resultObj = getBlend(rgb1, rgb2, heroBottom/windowHeight);
 		} else if (whoBottom >= windowHeight) {
 			resultObj = rgb2;
 		} else if (whoBottom < windowHeight && whoBottom >= 0) {
-			var topOpacity = whoBottom/windowHeight;
-			var tempObj = getBlend(rgb2.r, rgb2.g, rgb2.b, topOpacity, 255, 255, 255);
-			resultObj = getBlend(rgb3.r, rgb3.g, rgb3.b, 1-topOpacity, tempObj.r, tempObj.g, tempObj.b);
+			resultObj = getBlend(rgb2, rgb3, whoBottom/windowHeight);
 		} else if (signupBottom >= windowHeight) {
 			resultObj = rgb3;
 		} else if (signupBottom < windowHeight && signupBottom >= 0) {
-			var topOpacity = signupBottom/windowHeight;
-			var tempObj = getBlend(rgb3.r, rgb3.g, rgb3.b, topOpacity, 255, 255, 255);
-			resultObj = getBlend(rgb4.r, rgb4.g, rgb4.b, 1-topOpacity, tempObj.r, tempObj.g, tempObj.b);
+			resultObj = getBlend(rgb3, rgb4, signupBottom/windowHeight);
 		} else {
 			resultObj = rgb4;
 		}
