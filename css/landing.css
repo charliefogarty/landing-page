@@ -162,8 +162,8 @@ a.beta-login:hover {
 }
 
 #lorem-is-for h1 {
-	letter-spacing: 2.84px;
-	font-size: 28px;
+	letter-spacing: 2.61px;
+	font-size: 18px;
 	margin-bottom: 30px;
 	font-weight: 700;
 	line-height: 40px;
@@ -194,6 +194,17 @@ section.side-by-side h2 {
 	font-size: 24px;
 	line-height: 40px;
 	text-transform: lowercase;
+}
+
+section.side-by-side div.side-by-side-line {
+	display: block;
+	overflow: hidden;
+	position: relative;
+	height: 6px;
+	width: 250px;
+	background: url('../images/underline.png');
+	background-size: 250px 6px;
+	margin: auto; 
 }
 
 section.side-by-side h3 {
@@ -242,6 +253,12 @@ section.side-by-side h3 {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+	transition: all 0.3s;
+}
+
+.landing-inputs.submitted {
+	opacity: 0.3;
+	pointer-events: none;
 }
 
 .floating-input-field {
@@ -278,28 +295,29 @@ section.side-by-side h3 {
 	font-weight: 300;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: color 9999s ease-out, background-color 9999s ease-out;
+    transition-delay: 9999s;
+}
+
 .floating-input-field label {
 	position: absolute;
 	display: block;
 	overflow: hidden;
 	pointer-events: none;
 	text-transform: uppercase;
-	line-height: 50px;
-	top: 10px;
+	line-height: 20px;
+	top: 0px;
 	left: 0px;
 	height: 50px;
 	user-select: none;
 	padding: 0 10px;
 	letter-spacing: 1.5px;
-	font-size: 16px;
-	transition: 0.2s ease all;
-}
-
-.floating-input-field.floating-input-label-up label, .floating-input-field input:focus ~ label {
 	color: rgba(255, 255, 255, 0.75);
 	font-size: 12px;
-	line-height: 20px;
-	top: 0px;
 }
 
 div.input-toggle {
@@ -410,8 +428,20 @@ div.input-toggle-middle {
 	border-color: #DB6262;
 }
 
-.landing-action:hover {
+.landing-action:hover, #landing-error:hover {
 	color: #4FF7FF;
+	border-color: #4FF7FF;
+}
+
+#landing-success {
+	background: url('../images/success.png');
+	background-size: 30px 30px;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-color: #56FCAD;
+	width: 40px;
+	padding: 0;
+	cursor: default;
 }
 
 #two-cities {
@@ -577,6 +607,7 @@ div.footer-social a img {
 	}
 
 	#lorem-is-for h1 {
+		letter-spacing: 3.65px;
 		font-size: 28px;
 		margin-bottom: 80px;
 	}
