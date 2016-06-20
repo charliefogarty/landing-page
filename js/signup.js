@@ -45,7 +45,7 @@ $(document).ready(function() {
 		}
 		body.style.backgroundColor = 'rgb('+resultObj.r+', '+resultObj.g+', '+resultObj.b+')';
 	}
-	checkBg();
+	setTimeout(checkBg);
 
 	$(window).on('scroll resize', checkBg);
 	
