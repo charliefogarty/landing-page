@@ -112,6 +112,7 @@ div.hero {
 	width: 100%;
 	margin-top: 40px;
 	margin-left: 40px;
+	min-height: 400px;
 }
 
 div.hero img {
@@ -127,6 +128,7 @@ div.hero-moblie {
 	position: relative;
 	width: 100%;
 	padding: 10px;
+	min-height: 400px;
 }
 
 div.hero-moblie img {
