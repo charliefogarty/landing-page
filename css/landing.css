@@ -86,8 +86,8 @@ section .container {
 }
 
 #header-hero h2 {
-	letter-spacing: 2.61px;
 	font-size: 18px;
+	letter-spacing: 1.61px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-weight: 700;
@@ -157,64 +157,57 @@ a.beta-login:hover {
 	color: #4FF7FF;
 }
 
-#lorem-is-for {
-	padding: 180px 0;
+#lorem-slides {
+	padding: 180px 0 80px;
 }
 
-#lorem-is-for h1 {
+section.slide {
+	margin-bottom: 150px;
+	clear: both;
+}
+
+div.slide-info {
+	width: 100%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+div.slide-info h1 {
+	line-height: 34px;
 	letter-spacing: 2.61px;
-	font-size: 18px;
+	font-size: 24px;
 	margin-bottom: 30px;
 	font-weight: 700;
-	line-height: 40px;
 	text-transform: uppercase;
 }
 
-section.side-by-side {
-	width: 100%;
-	padding: 0;
-	margin-bottom: 30px;
-}
-
-div.side-by-side-separator {
-	position: relative;
-	display: block;
-	overflow: hidden;
-	width: 100%;
-	margin-bottom: 30px;
-	letter-spacing: 3.87px;
-	font-size: 28px;
+div.slide-info h1 span {
+	color: #112D4B;
 	font-weight: 700;
-	line-height: 40px;
 }
 
-section.side-by-side h2 {
-	font-weight: 700;
-	letter-spacing: 3.13px;
-	font-size: 24px;
-	line-height: 40px;
-	text-transform: lowercase;
-}
-
-section.side-by-side div.side-by-side-line {
-	display: block;
-	overflow: hidden;
-	position: relative;
-	height: 6px;
-	width: 250px;
-	background: url('../images/underline.png');
-	background-size: 250px 6px;
-	margin: auto; 
-}
-
-section.side-by-side h3 {
-	font-weight: 300;
-	letter-spacing: 2.45px;
-	font-size: 19px;
+div.slide-info h2 {
+	font-size: 16px;
 	line-height: 30px;
-	margin-top: 15px;
-	text-transform: lowercase;
-	color: white;
+	letter-spacing: 2.45px;
+	font-weight: 300;
+}
+
+div.slide-icon {
+	width: 100%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin-bottom: 25px;
+}
+
+div.slide-icon img {
+	width: 70%;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: auto;
 }
 
 #early-adopter {
@@ -582,6 +575,14 @@ div.footer-social a img {
 	height: 30px;
 }
 
+@media (min-width: 500px) {
+	
+	#header-hero h2 {
+		font-size: 24px;
+	}
+
+}
+
 @media (min-width: 600px) {
 	.mobile-only {
 		display: none !important;
@@ -606,17 +607,36 @@ div.footer-social a img {
 		margin-bottom: 0;
 	}
 
-	#lorem-is-for h1 {
-		letter-spacing: 3.65px;
-		font-size: 28px;
-		margin-bottom: 80px;
+	div.slide-info h1 {
+		line-height: 40px;
 	}
 
-	section.side-by-side {
-		padding: 0 15px;
+	div.slide-info {
+		float: right;
 		width: 50%;
+	}
+
+	section.slide:nth-child(even) div.slide-info {
 		float: left;
-		margin-bottom: 50px;
+	}
+
+	div.slide-info h2 {
+		font-size: 18px;
+		line-height: 34px;
+	}
+
+	div.slide-icon {
+		margin-bottom: 0;
+		float: right;
+		width: 50%;
+	}
+
+	section.slide:nth-child(even) div.slide-icon {
+		float: left;
+	}
+
+	div.slide-icon img {
+		width: 100%;
 	}
 
 	div.input-toggle-option {
@@ -636,8 +656,10 @@ div.footer-social a img {
 	}
 }
 
-@media (min-width: 767px) {
-	section.side-by-side {
-		padding: 0 40px;
+@media (min-width: 840px) {
+
+	div.slide-icon img {
+		width: 70%;
 	}
+
 }

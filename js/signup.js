@@ -12,18 +12,19 @@ $(document).ready(function() {
 
 	var body = document.body;
 	var heroSection = document.getElementById("header-hero");
-	var whoSection = document.getElementById("lorem-is-for");
+	var slidesSection = document.getElementById("lorem-slides");
 	var signupSection = document.getElementById("early-adopter");
 
 	var rgb1 = {r: 9, g: 21, b: 36};
-	var rgb2 = {r: 29, g: 173, b: 155};
+	// var rgb2 = {r: 29, g: 173, b: 155};
+	var rgb2 = {r: 16, g: 146, b: 146};
 	var rgb3 = {r: 67, g: 162, b: 236};
 	var rgb4 = {r: 255, g: 255, b: 255};
 
 	var checkBg = function() {
 		var windowHeight = $(window).height();
 		var heroBottom = heroSection.getBoundingClientRect().bottom;
-		var whoBottom = whoSection.getBoundingClientRect().bottom;
+		var slidesBottom = slidesSection.getBoundingClientRect().bottom;
 		var signupBottom = signupSection.getBoundingClientRect().bottom;
 
 		var resultObj;
@@ -31,10 +32,10 @@ $(document).ready(function() {
 			resultObj = rgb1;
 		} else if (heroBottom < windowHeight && heroBottom >= 0) {
 			resultObj = getBlend(rgb1, rgb2, heroBottom/windowHeight);
-		} else if (whoBottom >= windowHeight) {
+		} else if (slidesBottom >= windowHeight) {
 			resultObj = rgb2;
-		} else if (whoBottom < windowHeight && whoBottom >= 0) {
-			resultObj = getBlend(rgb2, rgb3, whoBottom/windowHeight);
+		} else if (slidesBottom < windowHeight && slidesBottom >= 0) {
+			resultObj = getBlend(rgb2, rgb3, slidesBottom/windowHeight);
 		} else if (signupBottom >= windowHeight) {
 			resultObj = rgb3;
 		} else if (signupBottom < windowHeight && signupBottom >= 0) {
@@ -44,6 +45,7 @@ $(document).ready(function() {
 		}
 		body.style.backgroundColor = 'rgb('+resultObj.r+', '+resultObj.g+', '+resultObj.b+')';
 	}
+	checkBg();
 
 	$(window).on('scroll resize', checkBg);
 	
