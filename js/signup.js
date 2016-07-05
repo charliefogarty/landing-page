@@ -11,141 +11,39 @@ $(document).ready(function() {
 	}
 
 	var body = document.body;
-	var headerSection = document.getElementById("header");
-	var headerFix = document.getElementById("header-fix");
-	var skipSection = document.getElementById("skip-the-pain");
-	var skipFix = document.getElementById("skip-fix");
-	var skipList = document.getElementById("skip-list");
-	var paradiseSection = document.getElementById("paradise");
-	var solutionSection = document.getElementById("solution");
+	var heroSection = document.getElementById("header-hero");
+	var slidesSection = document.getElementById("lorem-slides");
 	var signupSection = document.getElementById("early-adopter");
-	var $skipListItems = $('.skip-list-item');
 
-	var rgb1 = {r: 0, g: 6, b: 69};
-	var rgb2 = {r: 34, g: 1, b: 64};
-	var rgb3 = {r: 173, g: 226, b: 255};
-	var rgb4 = {r: 50, g: 69, b: 194};
-	var rgb5 = {r: 255, g: 255, b: 255};
+	var rgb1 = {r: 9, g: 21, b: 36};
+	// var rgb2 = {r: 29, g: 173, b: 155};
+	var rgb2 = {r: 16, g: 146, b: 146};
+	var rgb3 = {r: 67, g: 162, b: 236};
+	var rgb4 = {r: 255, g: 255, b: 255};
 
 	var checkBg = function() {
-		var resultObj;
 		var windowHeight = $(window).height();
-		var headerFixRect = headerFix.getBoundingClientRect();
-		headerSection.style.minHeight = Math.max(1.5*windowHeight, headerFixRect.height)+'px';
-		var headerRect = headerSection.getBoundingClientRect();
-		var skipFixRect = skipFix.getBoundingClientRect();
-		var skipListRect = skipList.getBoundingClientRect();
-		skipSection.style.minHeight = Math.max(1.5*windowHeight, skipListRect.height)+'px';
-		skipSection.style.paddingBottom = ((.75*windowHeight)-skipFixRect.height)+'px';
-		var skipRect = skipSection.getBoundingClientRect();
-		var paradiseRect = paradiseSection.getBoundingClientRect();
-		var signupRect = signupSection.getBoundingClientRect();
+		var heroBottom = heroSection.getBoundingClientRect().bottom;
+		var slidesBottom = slidesSection.getBoundingClientRect().bottom;
+		var signupBottom = signupSection.getBoundingClientRect().bottom;
 
-		if (headerRect.bottom >= windowHeight) {
-			headerFix.style.top = '0';
-			headerFix.style.position = 'fixed';
-			if (headerRect.bottom < (windowHeight*1.2)) {
-				$(headerFix).addClass('hide');
-			} else {
-				$(headerFix).removeClass('hide');
-			}
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = "25vh";
-			$(paradiseSection).addClass('hide');
+		var resultObj;
+		if (heroBottom >= windowHeight) {
 			resultObj = rgb1;
-		} else if (headerRect.bottom < windowHeight && skipRect.top >= 0) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = "25vh";
-			$(paradiseSection).addClass('hide');
-			if (headerRect.bottom >= windowHeight/2) {
-				resultObj = rgb1;
-			} else if (skipRect.top <= windowHeight/2) {
-				resultObj = rgb2;
-			} else {
-				resultObj = getBlend(rgb1, rgb2, (skipRect.top-(windowHeight/2))/(skipRect.top-headerRect.bottom));
-			}
-		} else if (skipRect.top < 0 && skipRect.bottom >= windowHeight) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'fixed';
-			skipFix.style.top = "25vh";
-			var highlight = Math.max(Math.min($skipListItems.length-Math.round((50+skipRect.bottom - windowHeight)/50), $skipListItems.length), 0);
-			$skipListItems.removeClass('ten twenty thirty fifty full');
-			$($skipListItems[highlight]).addClass('full');
-			if ($skipListItems[highlight-1]) $($skipListItems[highlight-1]).addClass('fifty');
-			if ($skipListItems[highlight+1]) $($skipListItems[highlight+1]).addClass('twenty');
-			if ($skipListItems[highlight-2]) $($skipListItems[highlight-2]).addClass('thirty');
-			if ($skipListItems[highlight+2]) $($skipListItems[highlight+2]).addClass('ten');
-			$(paradiseSection).addClass('hide');
+		} else if (heroBottom < windowHeight && heroBottom >= 0) {
+			resultObj = getBlend(rgb1, rgb2, heroBottom/windowHeight);
+		} else if (slidesBottom >= windowHeight) {
 			resultObj = rgb2;
-		} else if (skipRect.bottom < windowHeight && paradiseRect.top >= windowHeight) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = (skipListRect.height+100+(windowHeight*.25)-skipFixRect.height)+'px';
-			$(paradiseSection).addClass('hide');
-			resultObj = getBlend(rgb2, rgb3, (paradiseRect.top-windowHeight)/(paradiseRect.top-skipRect.bottom));
-		} else if (paradiseRect.top >= 0) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = (skipListRect.height+100+(windowHeight*.25)-skipFixRect.height)+'px';
-			$(paradiseSection).addClass('hide');
+		} else if (slidesBottom < windowHeight && slidesBottom >= 0) {
+			resultObj = getBlend(rgb2, rgb3, slidesBottom/windowHeight);
+		} else if (signupBottom >= windowHeight) {
 			resultObj = rgb3;
-		} else if (paradiseRect.bottom >= 0 && signupRect.top >= windowHeight) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = (skipListRect.height+100+(windowHeight*.25)-skipFixRect.height)+'px';
-			$(paradiseSection).removeClass('hide');
-			resultObj = rgb3;
-		} else if (signupRect.bottom >= windowHeight) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = (skipListRect.height+100+(windowHeight*.25)-skipFixRect.height)+'px';
-			$(paradiseSection).removeClass('hide');
-			resultObj = rgb4;
-		} else if (signupRect.bottom < windowHeight && signupRect.bottom >= 0) {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = (skipListRect.height+100+(windowHeight*.25)-skipFixRect.height)+'px';
-			$(paradiseSection).removeClass('hide');
-			resultObj = getBlend(rgb4, rgb5, signupRect.bottom/windowHeight);
+		} else if (signupBottom < windowHeight && signupBottom >= 0) {
+			resultObj = getBlend(rgb3, rgb4, signupBottom/windowHeight);
 		} else {
-			headerFix.style.top = (document.body.scrollTop-(windowHeight-headerRect.bottom))+'px';
-			headerFix.style.position = 'absolute';
-			$(headerFix).addClass('hide');
-			skipFix.style.position = 'absolute';
-			skipFix.style.top = (skipListRect.height+100+(windowHeight*.25)-skipFixRect.height)+'px';
-			$(paradiseSection).removeClass('hide');
-			resultObj = rgb5;
+			resultObj = rgb4;
 		}
-
 		body.style.backgroundColor = 'rgb('+resultObj.r+', '+resultObj.g+', '+resultObj.b+')';
-		return;
-		// if (headerBottom >= windowHeight) {
-		// } else if (headerBottom < windowHeight && headerBottom >= 0) {
-		// } else if (slidesBottom >= windowHeight) {
-		// } else if (slidesBottom < windowHeight && slidesBottom >= 0) {
-		// 	resultObj = getBlend(rgb2, rgb3, slidesBottom/windowHeight);
-		// } else if (signupBottom >= windowHeight) {
-		// 	resultObj = rgb3;
-		// } else if (signupBottom < windowHeight && signupBottom >= 0) {
-		// 	resultObj = getBlend(rgb3, rgb4, signupBottom/windowHeight);
-		// } else {
-		// 	resultObj = rgb4;
-		// }
 	}
 	setTimeout(checkBg);
 
