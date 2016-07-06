@@ -2,53 +2,6 @@
 
 $(document).ready(function() {
 
-	var getBlend = function(color1, color2, percent) {
-		return {
-			r: Math.round(color1.r * percent + color2.r * (1 - percent)),
-			g: Math.round(color1.g * percent + color2.g * (1 - percent)),
-			b: Math.round(color1.b * percent + color2.b * (1 - percent))
-		};
-	}
-
-	var body = document.body;
-	var heroSection = document.getElementById("header-hero");
-	var slidesSection = document.getElementById("lorem-slides");
-	var signupSection = document.getElementById("early-adopter");
-
-	var rgb1 = {r: 9, g: 21, b: 36};
-	// var rgb2 = {r: 29, g: 173, b: 155};
-	var rgb2 = {r: 16, g: 146, b: 146};
-	var rgb3 = {r: 67, g: 162, b: 236};
-	var rgb4 = {r: 255, g: 255, b: 255};
-
-	var checkBg = function() {
-		var windowHeight = $(window).height();
-		var heroBottom = heroSection.getBoundingClientRect().bottom;
-		var slidesBottom = slidesSection.getBoundingClientRect().bottom;
-		var signupBottom = signupSection.getBoundingClientRect().bottom;
-
-		var resultObj;
-		if (heroBottom >= windowHeight) {
-			resultObj = rgb1;
-		} else if (heroBottom < windowHeight && heroBottom >= 0) {
-			resultObj = getBlend(rgb1, rgb2, heroBottom/windowHeight);
-		} else if (slidesBottom >= windowHeight) {
-			resultObj = rgb2;
-		} else if (slidesBottom < windowHeight && slidesBottom >= 0) {
-			resultObj = getBlend(rgb2, rgb3, slidesBottom/windowHeight);
-		} else if (signupBottom >= windowHeight) {
-			resultObj = rgb3;
-		} else if (signupBottom < windowHeight && signupBottom >= 0) {
-			resultObj = getBlend(rgb3, rgb4, signupBottom/windowHeight);
-		} else {
-			resultObj = rgb4;
-		}
-		body.style.backgroundColor = 'rgb('+resultObj.r+', '+resultObj.g+', '+resultObj.b+')';
-	}
-	setTimeout(checkBg);
-
-	$(window).on('scroll resize', checkBg);
-	
 	var toggleChange = function() {
 		$('.input-toggle-option').removeClass('input-toggle-option-selected');
 		$(this.parentNode).addClass('input-toggle-option-selected');
@@ -134,20 +87,19 @@ $(document).ready(function() {
 
 	var emailQueryParam = setOrReadCookie('email', getQueryParamFromUrl(window.location.search, 'email')) || '';
 	var nameQueryParam = setOrReadCookie('name', getQueryParamFromUrl(window.location.search, 'name')) || '';
-	var typeQueryParam = setOrReadCookie('type', getQueryParamFromUrl(window.location.search, 'type')) || 'developer';
+	var typeQueryParam = setOrReadCookie('type', getQueryParamFromUrl(window.location.search, 'type')) || '';
 	var reffStr = readCookie('__reff') || '';
 	if (reffStr) checkAndSetReffCookie(reffStr);
 
 	// set the values in the form (hidden too)
 	if (emailQueryParam) document.getElementById('email-input').value = emailQueryParam;
 	if (nameQueryParam) document.getElementById('name-input').value = nameQueryParam;
-	var selectedToggle = $('input:radio[name="USERTYPE"][value="'+typeQueryParam+'"]')[0];
-	selectedToggle.setAttribute('checked', true);
-	toggleChange.call(selectedToggle);
+	if (typeQueryParam) {
+		var selectedToggle = $('input:radio[name="USERTYPE"][value="'+typeQueryParam+'"]')[0];
+		selectedToggle.setAttribute('checked', true);
+		toggleChange.call(selectedToggle);
+	}
 	$('#reff-input').val(reffStr);
-
-
-    
 
 	var invalidSubmission = function () {
 		$('#landing-submit').hide();
