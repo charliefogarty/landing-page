@@ -1,10 +1,12 @@
-<!DOCTYPE html><html lang="en"><head>
-		<title>Lorem Web Editor</title>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lorem: HTML to Done.</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="description" content="Lorem is reimagining the way startups build, manage, and host their landing page. Launching in Fall 2016.">
+		<meta name="description" content="Lorem is reimagining the way you build, manage, and host your website. Launching in Fall 2016.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="shortcut icon" href="images/fav.ico">
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="css/landing.css">
 		<!--[if lt IE 9]>
 			<script>
@@ -22,68 +24,38 @@
 		</script>
 	</head>
 	<body>
-		<section id="header-hero">
+		<header>
+			<a href="" class="header-logo">
+				<img alt="Lorem Logo" src="images/lorem_logo.png">
+			</a>
 			<div class="container">
-				<h1>
-					<img alt="Lorem Web Editor Logo" src="images/PATYAQMe.png">
-				</h1>
-				<h2>Focus on your product, we got your landing page</h2>
-				<h3 class="desktop-only">(we make it editable, host it, and record every change in version control, so you don't have to.)</h3>
+				<h1>HTML to Done.</h1>
+				<h2>A visual content editor. Unbeatable, static hosting. Synced with version control.<br>All you have to do is write the HTML.</h2>
 			</div>
-			<div class="hero desktop-only">
-				<img src="images/web_editor.png" alt="Web Editor Visualization">
+			<div class="hero">
+				<img class="mobile-only" src="images/html_to_done_mobile.png" alt="HTML to Done">
+				<img class="desktop-only" src="images/html_to_done_hero.png" alt="HTML to Done">
 			</div>
-			<div class="hero-moblie mobile-only">
-				<img src="images/web_editor_mobile.png" alt="Web Editor Visualization">
+			<div class="nav">
+				<a class="desktop-only" href="http://editor.lorem.tech">Beta Login</a>
+				<a class="desktop-only" href="#signup">Sign Up</a>
 			</div>
-			<a class="beta-login desktop-only" href="http://editor.lorem.tech" target="_blank">Beta Login</a>
-		</section>
-		<section id="lorem-slides">
+		</header>
+		<section id="we-believe">
 			<div class="container">
-				<section class="slide">
-					<div class="slide-icon">
-						<img src="images/tech_stack_icon.png" />
-					</div>
-					<div class="slide-info">
-						<h1><span>build</span> your website <span>simply</span></h1>
-						<h2>No PHP, templating language, or new framework to learn, code your site however you want in HTML, CSS, and JavaScript and let Lorem handle the rest.</h2>
-					</div>
-				</section>
-				<section class="slide">
-					<div class="slide-icon">
-						<img src="images/editor_icon.png" />
-					</div>
-					<div class="slide-info">
-						<h1><span>edit</span> your website <span>easily</span></h1>
-						<h2>Our algorithms analyze your code to build a customizeable admin interface so your team can manage the site and edit everything they want.</h2>
-					</div>
-				</section>
-				<section class="slide">
-					<div class="slide-icon">
-						<img src="images/hosting_icon.png" />
-					</div>
-					<div class="slide-info">
-						<h1><span>host</span> your website <span>effortlessly</span></h1>
-						<h2>We'll save you a week on Stack Overflow by building the best in class hosting infrastructure for you. Maximum speed, uptime, and security.</h2>
-					</div>
-				</section>
-				<section class="slide">
-					<div class="slide-icon">
-						<img src="images/version_control_icon.png" />
-					</div>
-					<div class="slide-info">
-						<h1><span>trust</span> your website <span>entirely</span></h1>
-						<h2>Everything is recorded in git. Pull to get the latest changes or push to deploy a new version. Sleep easy knowing your team can't break the site.</h2>
-					</div>
-				</section>
+				<div class="split-container left">
+					<h1>We believe in a simpler way to build websites.</h1>
+				</div><div class="split-container right">
+					<h2>Lorem is for developers who want to keep their tech stack simple and get the job done quicker. Who want to work on the newest, hardest problems, not waste their time re-solving solved problems. Who want to write Lorem Ipsum and let someone else fill it in later. Lorem is built for them.</h2>
+				</div>
 			</div>
 		</section>
-		<section id="early-adopter">
+		<section id="signup">
 			<div class="container">
 				<h1 id="become-adopter">Become an early adopter</h1>
 				<h1 id="thanks-adopter" style="display: none;">Thanks!!!</h1>
-				<h2 id="info-adopter">help shape Lorem before launch</h2>
-				<h2 id="success-adopter" style="display: none;">we'll be in touch very soon</h2>
+				<h2 id="info-adopter">Join our beta. Help shape Lorem before launch.</h2>
+				<h2 id="success-adopter" style="display: none;">We'll be in touch very soon.</h2>
 				<form id="landing-form">
 					<div class="landing-inputs">
 						<div class="floating-input-field">
@@ -94,25 +66,30 @@
 							<input type="email" id="email-input" name="EMAIL" spellcheck="false" required="">
 							<label>Email</label>
 						</div>
-						<div class="input-toggle">
-							<div class="input-toggle-option input-toggle-option-left input-toggle-option-selected">
-								<label for="option-developer">Developer</label>
-								<input type="radio" id="option-developer" name="USERTYPE" value="developer">
+						<input type="text" id="reff-input" hidden="" name="REFFSTR" spellcheck="false">
+						<div class="third-row">
+							<div class="input-toggle">
+								<div class="input-toggle-option">
+									<label for="option-developer">
+										<div class="input-toggle-option-radio"></div>
+										<div class="input-toggle-option-text">Developer</div>
+									</label>
+									<input type="radio" id="option-developer" name="USERTYPE" value="developer">
+								</div>
+								<div class="input-toggle-option">
+									<label for="option-editor">
+										<div class="input-toggle-option-radio"></div>
+										<div class="input-toggle-option-text">Website Editor</div>
+									</label>
+									<input type="radio" id="option-editor" name="USERTYPE" value="editor">
+								</div>
 							</div>
-							<div class="input-toggle-middle">
-								or
-							</div>
-							<div class="input-toggle-option input-toggle-option-right">
-								<label for="option-editor">Website Editor</label>
-								<input type="radio" id="option-editor" name="USERTYPE" value="editor">
+							<div class="landing-actions">
+								<input type="submit" name="submit" value="Sign Up" id="landing-submit" class="landing-action">
+								<input type="submit" name="submit" value="Try Again" id="landing-error" class="landing-action" style="display: none;">
+								<div id="landing-success" class="landing-action" style="display: none;"></div>
 							</div>
 						</div>
-						<input type="text" id="reff-input" hidden="" name="REFFSTR" spellcheck="false">
-					</div>
-					<div class="landing-actions">
-						<input type="submit" name="submit" value="submit" id="landing-submit" class="landing-action">
-						<input type="submit" name="submit" value="try again" id="landing-error" class="landing-action" style="display: none;">
-						<div id="landing-success" class="landing-action" style="display: none;"></div>
 					</div>
 				</form>
 			</div>
@@ -123,7 +100,7 @@
 			</div>
 			<div class="container">
 				<h1>Crafted in New York &amp; Copenhagen</h1>
-				<h2>we're looking for talented engineers and data scientists</h2>
+				<h2>Join us. We're looking talented engineers and data scientists who believe in a simpler way to build websites.</h2>
 				<div class="email-us">
 					<a href="mailto:team@lorem.tech">team@lorem.tech</a>
 				</div>
@@ -137,7 +114,7 @@
 		</section>
 		<footer>
 			<div class="footer-logo desktop-only">
-				<img alt="Lorem Web Editor Logo" src="images/sahqUaur.png">
+				<img alt="Lorem Web Editor Logo" src="images/lorem_logo.png">
 			</div>
 			<div class="footer-copyright">
 				© 2016 Lorem Technologies Inc.
@@ -145,9 +122,6 @@
 			<div class="footer-social desktop-only">
 				<a class="footer-social-link" href="https://twitter.com/Lorem_tech" target="_blank">
 					<img src="images/twitter.png" alt="Twitter Logo">
-				</a>
-				<a class="footer-social-link" href="https://www.linkedin.com/company/lorem-technologies-inc" target="_blank">
-					<img src="images/linkedin.png" alt="LinkedIn Logo">
 				</a>
 			</div>
 		</footer>
@@ -166,5 +140,5 @@
 			getSetReff();
 		</script>
 		<script src="js/signup.js"></script>
-	
-</body></html>
+	</body>
+</html>
