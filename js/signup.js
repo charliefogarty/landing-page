@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+	console.log("Thanks for checking out the code. Reach out to us at team@lorem.tech");
+
 	var toggleChange = function() {
 		$('.input-toggle-option').removeClass('input-toggle-option-selected');
 		$(this.parentNode).addClass('input-toggle-option-selected');
@@ -86,14 +88,12 @@ $(document).ready(function() {
 	}
 
 	var emailQueryParam = setOrReadCookie('email', getQueryParamFromUrl(window.location.search, 'email')) || '';
-	var nameQueryParam = setOrReadCookie('name', getQueryParamFromUrl(window.location.search, 'name')) || '';
 	var typeQueryParam = setOrReadCookie('type', getQueryParamFromUrl(window.location.search, 'type')) || '';
 	var reffStr = readCookie('__reff') || '';
 	if (reffStr) checkAndSetReffCookie(reffStr);
 
 	// set the values in the form (hidden too)
 	if (emailQueryParam) document.getElementById('email-input').value = emailQueryParam;
-	if (nameQueryParam) document.getElementById('name-input').value = nameQueryParam;
 	if (typeQueryParam) {
 		var selectedToggle = $('input:radio[name="USERTYPE"][value="'+typeQueryParam+'"]')[0];
 		selectedToggle.setAttribute('checked', true);
@@ -113,7 +113,6 @@ $(document).ready(function() {
 
 	var successfulSubmission = function () {
 		createCookie('email',document.getElementById('email-input').value,100);
-		createCookie('name',document.getElementById('name-input').value,100);
 		createCookie('type',$('input:radio[name="USERTYPE"]:checked').val(),100);
 		
 		$('.landing-inputs').addClass('submitted');

@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
+<!DOCTYPE html><html lang="en"><head>
 		<title>Lorem: HTML to Done.</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="description" content="Lorem is reimagining the way you build, manage, and host your website. Launching in Fall 2016.">
+		<meta name="description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="shortcut icon" href="images/fav.ico">
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="css/landing.css">
+		<link rel="canonical" href="https://lorem.tech">
 		<!--[if lt IE 9]>
 			<script>
 				document.createElement("header");
@@ -22,6 +21,21 @@
 			ga('create', 'UA-72388809-2', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<meta property="og:url" content="https://lorem.tech">
+		<meta property="og:title" content="Lorem: HTML to Done.">
+		<meta property="og:description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016.">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://lorem.tech/images/share_html_to_done_big.png">
+		<meta property="og:site_name" content="Lorem Technologies">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@lorem_tech">
+		<meta name="twitter:title" content="Lorem: HTML to Done.">
+		<meta name="twitter:description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016.">
+		<meta name="twitter:image" content="https://lorem.tech/images/share_html_to_done.png">
+		<meta name="twitter:creator" content="@lorem_tech">
+		<meta name="twitter:domain" content="lorem.tech">
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/lorem.tech","sameAs":["https:\/\/www.facebook.com\/loremtech","https:\/\/www.linkedin.com\/company\/lorem-technologies-inc","https:\/\/twitter.com\/lorem_tech"],"name":"Lorem Technologies","logo":"https:\/\/lorem.tech\/images\/logo.png","description":"Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016."}</script>
 	</head>
 	<body>
 		<header>
@@ -30,7 +44,7 @@
 			</a>
 			<div class="container">
 				<h1>HTML to Done.</h1>
-				<h2>A visual content editor. Unbeatable, static hosting. Synced with version control.<br>All you have to do is write the HTML.</h2>
+				<h2>Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting.</h2>
 			</div>
 			<div class="hero">
 				<img class="mobile-only" src="images/html_to_done_mobile.png" alt="HTML to Done">
@@ -41,6 +55,46 @@
 				<a class="desktop-only" href="#signup">Sign Up</a>
 			</div>
 		</header>
+		<section id="html-css-js">
+			<div class="scene">
+				<div class="split-scene left text">
+					<h1>HTML, CSS, and JavaScript. Period.</h1>
+					<h2>With Lorem you don't need to learn anything new. No special syntax, no documentation, no fitting into a box. Just simple, beautiful HTML (with any CSS or JavaScript you want).</h2>
+				</div><div class="split-scene right image desktop-only">
+					<img alt="Solution: Only HTML, CSS, JS." src="images/solution_only_html.png">
+				</div>
+			</div>
+		</section>
+		<section id="visual-editor">
+			<div class="scene">
+				<div class="split-scene left image">
+					<img src="images/solution_visual_editor.png" alt="Solution: Visual Editor.">
+				</div><div class="split-scene right text">
+					<h1>A visual editor for your website.</h1>
+					<h2>Lorem analyzes your HTML to identify what is editable and automatically builds a visual editing interface for your site. This enables the rest of your team to edit everything they want, manage the site, and publish changes without shoulder-tapping developers. We’ve made content editing as simple as possible.</h2>
+				</div>
+			</div>
+		</section>
+		<section id="static-hosting">
+			<div class="scene">
+				<div class="split-scene left text">
+					<h1>Hosted by perfectionists.</h1>
+					<h2>With Lorem you don't need to think about hosting (or speed or uptime or security). We meticulously follow best practices to ensure that every one of our sites is running on the best hosting infrastructure possible. Statically served from a global CDN with SSL, your site will be as fast and secure as websites can get.</h2>
+				</div><div class="split-scene right image">
+					<img src="images/solution_static_hosting.png" alt="Solution: Static Hosting.">
+				</div>
+			</div>
+		</section>
+		<section id="version-control">
+			<div class="scene">
+				<div class="split-scene left image desktop-only">
+					<img src="images/solution_version_control.png" alt="Solution: Synced Version Control.">
+				</div><div class="split-scene right text">
+					<h1>git everything.</h1>
+					<h2>Lorem maps every change made in the visual editor back to version control to keep everything in sync. You can git pull to get the latest changes, git push to deploy a new version, git branch to create a draft and show off your progress, or git revert to a previous version at any time.</h2>
+				</div>
+			</div>
+		</section>
 		<section id="we-believe">
 			<div class="container">
 				<div class="split-container left">
@@ -59,12 +113,7 @@
 				<form id="landing-form">
 					<div class="landing-inputs">
 						<div class="floating-input-field">
-							<input type="text" id="name-input" name="FULLNAME" spellcheck="false" required="">
-							<label>Name</label>
-						</div>
-						<div class="floating-input-field">
-							<input type="email" id="email-input" name="EMAIL" spellcheck="false" required="">
-							<label>Email</label>
+							<input type="email" id="email-input" name="EMAIL" spellcheck="false" required="true" placeholder="Email">
 						</div>
 						<input type="text" id="reff-input" hidden="" name="REFFSTR" spellcheck="false">
 						<div class="third-row">
@@ -100,7 +149,7 @@
 			</div>
 			<div class="container">
 				<h1>Crafted in New York &amp; Copenhagen</h1>
-				<h2>Join us. We're looking talented engineers and data scientists who believe in a simpler way to build websites.</h2>
+				<h2>Join us. We're looking for talented engineers and data scientists who believe in a simpler way to build websites.</h2>
 				<div class="email-us">
 					<a href="mailto:team@lorem.tech">team@lorem.tech</a>
 				</div>
@@ -113,9 +162,9 @@
 			</div>
 		</section>
 		<footer>
-			<div class="footer-logo desktop-only">
-				<img alt="Lorem Web Editor Logo" src="images/lorem_logo.png">
-			</div>
+			<a href="" class="footer-logo desktop-only">
+				<img alt="Lorem Web Editor Logo" src="images/lorem_logo_footer.png">
+			</a>
 			<div class="footer-copyright">
 				© 2016 Lorem Technologies Inc.
 			</div>
@@ -140,5 +189,5 @@
 			getSetReff();
 		</script>
 		<script src="js/signup.js"></script>
-	</body>
-</html>
+	
+</body></html>

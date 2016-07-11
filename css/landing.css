@@ -14,6 +14,11 @@ body {
 	background: #111111;
 }
 
+body.thanks {
+	background: white;
+	color: black;
+}
+
 * {
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
@@ -77,6 +82,12 @@ header {
 	background: #111111;
 }
 
+body.thanks header {
+	padding-bottom: 50px;
+	background: white;
+	color: black;
+}
+
 header a.header-logo {
 	position: relative;
 	display: block;
@@ -94,17 +105,31 @@ header a.header-logo img {
 
 header h1 {
 	margin-top: 30px;
-	font-size: 32px;
-	line-height: 40px;
+	font-size: 30px;
+	line-height: 38px;
 	font-weight: 700;
 	letter-spacing: 0.5px;
 }
 
 header h2 {
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 18px;
+	line-height: 26px;
+	margin: auto;
 	margin-top: 15px;
 	color: #D5D5D5;
+	max-width: 700px;
+}
+
+body.thanks header h2 {
+	color: black;
+}
+
+header h2 a {
+	color: #57AFE7;
+}
+
+header h2 a:hover {
+	color: #1984B3;
 }
 
 div.hero {
@@ -143,27 +168,170 @@ div.nav a {
 	float: right;
 }
 
+body.thanks div.nav a {
+	color: black;
+}
+
 div.nav a:hover {
 	color: #4FF7FF;
 }
 
+body.thanks div.nav a:hover {
+	color: #1984B3;
+}
+
+#html-css-js {
+	padding: 80px 0 0;
+	background: white;
+	color: black;
+}
+
+#visual-editor {
+	padding: 80px 0;
+	background: white;
+	color: black;
+}
+
+#social {
+	padding: 80px 0;
+	background: #F8F8F8;
+	color: #525252;
+}
+
+#static-hosting {
+	padding: 80px 0 0;
+	background: #111111;
+}
+
+#version-control {
+	padding: 80px 0;
+	background: #111111;
+}
+
+#static-hosting h2, #version-control h2 {
+	color: #D5D5D5;
+}
+
+.scene {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	max-width: 1300px;
+	padding: 0 15px;
+	margin: auto;
+}
+
+.split-scene {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+#social .split-scene.left {
+	margin-bottom: 80px;
+}
+
+#visual-editor .split-scene.left {
+	margin-bottom: 80px;
+}
+
+#static-hosting .split-scene.right {
+	margin-top: 80px;
+}
+
+.split-scene.text {
+	padding: 0 10px;
+}
+
+.split-scene h1 {
+	font-size: 26px;
+	line-height: 34px;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+.split-scene h2 {
+	font-size: 16px;
+	line-height: 24px;
+	margin-top: 20px;
+}
+
+.split-scene.image img {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+}
+
+#social .split-scene h1 img {
+	position: relative;
+	height: 34px;
+	overflow: hidden;
+	margin-right: 7px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#social .split-scene h1 a {
+	position: relative;
+	overflow: hidden;
+	margin-left: 7px;
+	color: #525252;
+	font-weight: 700;
+	font-size: 24px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#social .split-scene h1 a:hover {
+	color: #1984B3;
+}
+
+#social .split-scene h2 {
+	margin-top: 60px;
+}
+
+#social .split-scene h2 span {
+	font-weight: 700;
+	font-size: 22px;
+	line-height: 32px;
+}
+
+#social .split-scene h2 span img {
+	height: 22px;
+}
+
+#social .split-scene h2 a {
+	color: #57AFE7;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 32px;
+	margin-right: 5px;
+	margin-left: 5px;
+	white-space: nowrap;
+}
+
+#social .split-scene h2 a:hover {
+	color: #1984B3;
+}
+
 #we-believe {
-	padding: 40px 0;
+	padding: 80px 10px;
 	background: white;
 }
 
 .split-container {
 	display: block;
 	width: 100%;
-	vertical-align: top;
-	text-align: left;
 	color: black;
 	position: relative;
 	overflow: hidden;
 }
 
 .split-container.left {
-	text-align: center;
+	
 }
 
 .split-container.right {
@@ -196,11 +364,11 @@ div.nav a:hover {
 }
 
 #signup h2 {
-	font-size: 18px;
+	font-size: 17px;
 	line-height: 26px;
 	letter-spacing: 1px;
 	margin-bottom: 40px;
-	color: white;
+	color: #D5D5D5;
 }
 
 #landing-form {
@@ -208,7 +376,7 @@ div.nav a:hover {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	max-width: 500px;
+	max-width: 460px;
 	margin: auto;
 }
 
@@ -230,12 +398,6 @@ div.nav a:hover {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
-	height: 51px;
-	border-style: solid;
-	border-width: 0px;
-	border-bottom-width: 1px;
-	border-color: #ffffff;
-	border-color: rgba(255,255,255,0.39);
 }
 
 .floating-input-field + .floating-input-field {
@@ -243,7 +405,7 @@ div.nav a:hover {
 }
 
 .floating-input-field input {
-	padding: 20px 10px 10px;
+	padding: 10px 20px;
 	height: 50px;
 	font-size: 16px;
 	display: block;
@@ -251,12 +413,13 @@ div.nav a:hover {
 	overflow: hidden;
 	outline: none;
 	border: 0;
-	background: transparent;
+	background: #1F1F1F;
 	letter-spacing: 1.2px;
 	color: #ffffff;
 	width: 100%;
 	font-family: 'Lato', sans-serif;
 	font-weight: 300;
+	border-radius: 3px;
 }
 
 input:-webkit-autofill,
@@ -267,28 +430,12 @@ input:-webkit-autofill:active {
     transition-delay: 9999s;
 }
 
-.floating-input-field label {
-	position: absolute;
-	display: block;
-	overflow: hidden;
-	pointer-events: none;
-	line-height: 20px;
-	top: 0px;
-	left: 0px;
-	height: 50px;
-	user-select: none;
-	padding: 0 10px;
-	letter-spacing: 1.5px;
-	color: rgba(255, 255, 255, 0.75);
-	font-size: 12px;
-}
-
 div.third-row {
+	margin-top: 30px;
 	position: relative;
 	display: block;
 	overflow: hidden;
 	width: 100%;
-	margin-top: 20px;
 }
 
 div.input-toggle {
@@ -298,7 +445,6 @@ div.input-toggle {
 }
 
 div.input-toggle-option {
-	font-size: 14px;
 	line-height: 40px;
 	display: inline-block;
 	position: relative;
@@ -322,16 +468,17 @@ div.input-toggle-option label {
 }
 
 div.input-toggle-option div.input-toggle-option-radio {
+	width: 20px;
+	height: 20px;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
-	border: 1px solid #ffffff;
-	border-radius: 10px;
-	width: 20px;
-	height: 20px;
+	border: 1px solid #7B7B7B;
+	border-radius: 13px;
 	margin-right: 10px;
 	vertical-align: middle;
 	cursor: pointer;
+	transition: all 0.2s;
 }
 
 div.input-toggle-option.input-toggle-option-selected div.input-toggle-option-radio, div.input-toggle-option:hover div.input-toggle-option-radio {
@@ -340,10 +487,12 @@ div.input-toggle-option.input-toggle-option-selected div.input-toggle-option-rad
 }
 
 div.input-toggle-option div.input-toggle-option-text {
+	font-size: 14px;
 	position: relative;
 	display: inline-block;
 	overflow: hidden;
 	vertical-align: middle;
+	color: #D5D5D5;
 }
 
 div.input-toggle-option input {
@@ -362,7 +511,7 @@ div.input-toggle-option input {
 
 .landing-actions {
 	position: relative;
-	margin-top: 20px;
+	margin-top: 30px;
 	display: block;
 	overflow: hidden;
 }
@@ -371,15 +520,16 @@ div.input-toggle-option input {
 	font-size: 16px;
 	line-height: 38px;
 	height: 40px;
-	border: 1px solid white;
+	border: 1px solid #4FF7FF;
 	display: inline-block;
 	position: relative;
 	overflow: hidden;
 	letter-spacing: 1.5px;
 	color: white;
-	padding: 0 40px;
+	padding: 0 30px;
 	border-radius: 3px;
 	cursor: pointer;
+	transition: all 0.2s;
 }
 
 #landing-error {
@@ -388,7 +538,6 @@ div.input-toggle-option input {
 
 .landing-action:hover, #landing-error:hover {
 	color: #4FF7FF;
-	border-color: #4FF7FF;
 }
 
 #landing-success {
@@ -487,7 +636,7 @@ footer {
 	padding: 10px 20px;
 }
 
-div.footer-logo {
+.footer-logo {
 	position: absolute;
 	top: 10px;
 	left: 25px;
@@ -496,7 +645,7 @@ div.footer-logo {
 	overflow: hidden;
 }
 
-div.footer-logo img {
+.footer-logo img {
 	position: relative;
 	display: block;
 	overflow: hidden;
@@ -512,6 +661,7 @@ div.footer-copyright {
 	font-size: 14px;
 	letter-spacing: 1.43px;
 	font-weight: 300;
+	color: #D5D5D5;
 }
 
 div.footer-social {
@@ -541,12 +691,22 @@ div.footer-social a img {
 
 	div.third-row {
 		height: 40px;
+		margin-top: 40px;
 	}
 
 	div.input-toggle {
 		position: absolute;
 		top: 0px;
 		left: 0px;
+	}
+
+	div.input-toggle-option div.input-toggle-option-radio {
+		width: 25px;
+		height: 25px;
+	}
+
+	div.input-toggle-option div.input-toggle-option-text {
+		font-size: 16px;
 	}
 
 	.landing-actions {
@@ -572,6 +732,10 @@ div.footer-social a img {
 		padding-bottom: 30px;
 	}
 
+	body.thanks header {
+		padding-bottom: 80px;
+	}
+
 	header a.header-logo {
 		position: absolute;
 		top: 10px;
@@ -584,22 +748,86 @@ div.footer-social a img {
 	}
 
 	header h1 {
-		font-size: 48px;
+		font-size: 42px;
 		line-height: 70px;
 		margin-top: 100px;
 	}
 
-	header h2 {
-		font-size: 20px;
-		line-height: 28px;
+	body.thanks header h1 {
+		font-size: 45px;
 	}
 
-	#we-believe {
+	header h2 {
+		font-size: 24px;
+		line-height: 34px;
+	}
+
+	#html-css-js {
 		padding: 80px 0;
+	}
+
+	#static-hosting {
+		padding: 80px 0;
+	}
+
+	.split-scene {
+		display: inline-block !important;
+		vertical-align: middle;
+		width: 50%;
+	}
+
+	.split-scene.text {
+		padding: 0 15px;
+		max-width: 500px;
+	}
+
+	.split-scene.left {
+		padding-right: 20px;
+	}
+
+	#social .split-scene.left {
+		margin-bottom: 0px;
+	}
+
+	#visual-editor .split-scene.left {
+		margin-bottom: 0;
+	}
+
+	#static-hosting .split-scene.right {
+		margin-bottom: 0px;
+	}
+
+	.split-scene.right {
+		padding-left: 20px;
+	}
+
+	.split-scene h1 {
+		font-size: 28px;
+		line-height: 38px;
+		text-align: left;
+	}
+
+	#social .split-scene h1 {
+		text-align: center;
+	}
+
+	.split-scene h2 {
+		font-size: 18px;
+		line-height: 28px;
+		margin-top: 30px;
+		text-align: left;
+	}
+
+	#social .split-scene h2 {
+		text-align: center;
+		margin-top: 60px;
+		margin-bottom: 40px;
 	}
 
 	.split-container {
 		display: inline-block;
+		vertical-align: top;
+		text-align: left;
 		max-width: 500px;
 		width: 50%;
 		padding: 0 15px;
@@ -607,7 +835,6 @@ div.footer-social a img {
 
 	.split-container.left {
 		padding-right: 20px;
-		text-align: left;
 	}
 
 	.split-container.right {
@@ -621,8 +848,9 @@ div.footer-social a img {
 	}
 
 	#we-believe h2 {
-		font-size: 17px;
-		line-height: 25px;
+		font-size: 18px;
+		line-height: 28px;
+		padding: 0;
 	}
 
 	#signup h1 {
@@ -631,7 +859,7 @@ div.footer-social a img {
 	}
 
 	#signup h2 {
-		font-size: 20px;
+		font-size: 18px;
 		line-height: 30px;
 	}
 
@@ -657,16 +885,36 @@ div.footer-social a img {
 @media (min-width: 840px) {
 
 	header h1 {
-		font-size: 60px;
+		font-size: 50px;
+	}
+
+	body.thanks header h1 {
+		font-size: 45px;
 	}
 
 	header h2 {
-		font-size: 22px;
-		line-height: 34px;
+		font-size: 27px;
+		line-height: 37px;
 	}
 
 	div.hero {
 		padding: 0 10%;
+	}
+
+	.split-scene h1 {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	.split-scene h2 {
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	#social .split-scene h2 {
+		text-align: center;
+		margin-top: 60px;
+		margin-bottom: 40px;
 	}
 
 	.split-container.left {
@@ -683,8 +931,8 @@ div.footer-social a img {
 	}
 
 	#we-believe h2 {
-		font-size: 18px;
-		line-height: 26px;
+		font-size: 20px;
+		line-height: 30px;
 	}
 
 }
