@@ -2,6 +2,8 @@
 
 $(document).ready(function() {
 
+	console.log("Thanks for checking out the code. Reach out to us at team@lorem.tech");
+
 	var toggleChange = function() {
 		$('.input-toggle-option').removeClass('input-toggle-option-selected');
 		$(this.parentNode).addClass('input-toggle-option-selected');
