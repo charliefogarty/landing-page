@@ -4,8 +4,233 @@
 		<meta name="description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="shortcut icon" href="images/fav.ico">
-		<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css">
-		<link rel="stylesheet" href="css/landing.css">
+		<style type="text/css">
+			html, body {
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				overflow-x: hidden;
+			}
+			body {
+				color: white;
+				text-align: center;
+				background: #111111;
+			}
+			body.thanks {
+				background: white;
+				color: black;
+			}
+			* {
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			a:focus {
+				outline: none;
+			}
+			input, textarea {
+				outline: none;
+				background: transparent;
+				resize: none;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+				color: white;
+				border: 0;
+			}
+			.mobile-only {
+				display: block !important;
+			}
+			.desktop-only {
+				display: none !important;
+			}
+			h1, h2, h3, h4, h5, h6, header, section, footer {
+				display: block;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			header .container, section .container {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 0 15px;
+				max-width: 1200px;
+				margin: auto;
+			}
+			header {
+				padding-bottom: 15px;
+				background: #111111;
+			}
+			body.thanks header {
+				padding-bottom: 50px;
+				background: white;
+				color: black;
+			}
+			header a.header-logo {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				z-index: 2;
+				margin-top: 15px;
+			}
+			header a.header-logo img {
+				height: 45px;
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+			}
+			header h1 {
+				margin-top: 30px;
+				font-size: 30px;
+				line-height: 38px;
+				font-weight: 700;
+				letter-spacing: 0.5px;
+			}
+			header h2 {
+				font-size: 18px;
+				line-height: 26px;
+				margin: auto;
+				margin-top: 15px;
+				color: #D5D5D5;
+				max-width: 700px;
+			}
+			body.thanks header h2 {
+				color: black;
+			}
+			header h2 a {
+				color: #57AFE7;
+			}
+			header h2 a:hover {
+				color: #1984B3;
+			}
+			div.hero {
+				display: block;
+				overflow: hidden;
+				position: relative;
+				width: 100%;
+				margin-top: 40px;
+				padding: 0 2%;
+				min-height: 250px;
+			}
+			div.hero img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			div.nav {
+				position: absolute;
+				top: 25px;
+				right: 25px;
+				display: block;
+				overflow: hidden;
+			}
+			div.nav a {
+				position: relative;
+				color: white;
+				display: block;
+				overflow: hidden;
+				font-size: 14px;
+				padding: 0 20px;
+				letter-spacing: 1.6px;
+				line-height: 34px;
+				float: right;
+			}
+			body.thanks div.nav a {
+				color: black;
+			}
+			div.nav a:hover {
+				color: #4FF7FF;
+			}
+			body.thanks div.nav a:hover {
+				color: #1984B3;
+			}
+			#html-css-js {
+				padding: 80px 0 0;
+				background: white;
+				color: black;
+			}
+			.scene {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				max-width: 1300px;
+				padding: 0 15px;
+				margin: auto;
+			}
+			@media (min-width: 640px) {
+				.mobile-only {
+					display: none !important;
+				}
+				.desktop-only {
+					display: block !important;
+				}
+				header {
+					padding-bottom: 30px;
+				}
+				body.thanks header {
+					padding-bottom: 80px;
+				}
+				header a.header-logo {
+					position: absolute;
+					top: 10px;
+					left: 25px;
+					margin-top: 0;
+				}
+				header a.header-logo img {
+					height: 60px;
+				}
+				header h1 {
+					font-size: 42px;
+					line-height: 70px;
+					margin-top: 100px;
+				}
+				body.thanks header h1 {
+					font-size: 45px;
+				}
+				header h2 {
+					font-size: 24px;
+					line-height: 34px;
+				}
+				#html-css-js {
+					padding: 80px 0;
+				}
+			}
+			@media (min-width: 840px) {
+				header h1 {
+					font-size: 50px;
+				}
+				body.thanks header h1 {
+					font-size: 45px;
+				}
+				header h2 {
+					font-size: 27px;
+					line-height: 37px;
+				}
+				div.hero {
+					padding: 0 10%;
+				}
+			}
+		</style>
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,700" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css"></noscript>
+		<link rel="preload" href="css/landing.css" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="css/landing.css" rel="stylesheet" type="text/css"></noscript>
 		<!--[if lt IE 9]>
 			<script>
 				document.createElement("header");
@@ -20,7 +245,7 @@
 			ga('create', 'UA-72388809-2', 'auto');
 			ga('send', 'pageview');
 		</script>
-		<meta property="og:url" content="https://lorem.tech" />
+		<meta property="og:url" content="https://lorem.tech/thanks.html" />
 		<meta property="og:title" content="Lorem: HTML to Done." />
 		<meta property="og:description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016." />
 		<meta property="og:locale" content="en_US">
@@ -35,6 +260,8 @@
 		<meta name="twitter:creator" content="@lorem_tech">
 		<meta name="twitter:domain" content="lorem.tech">
 		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/lorem.tech","sameAs":["https:\/\/www.facebook.com\/loremtech","https:\/\/www.linkedin.com\/company\/lorem-technologies-inc","https:\/\/twitter.com\/lorem_tech"],"name":"Lorem Technologies","logo":"https:\/\/lorem.tech\/images\/logo.png","description":"Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016."}</script>
+		<script type="text/javascript">!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);</script>
+		<script type="text/javascript">!function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(e){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),n=0;n<e.length;n++){var r=e[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(t.loadCSS(r.href,r),r.rel=null)}},!e.support()){e.poly();var n=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){t.clearInterval(n)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(n)})}}}(this);</script>
 	</head>
 	<body class="thanks">
 		<header>
