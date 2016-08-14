@@ -1,7 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
 		<title>Lorem: Thanks!</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016.">
+		<meta name="description" content="Thanks for signing up for Lorem. You'll hear from us very soon. In the meantime, connect with us on Twitter @lorem_tech.">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link rel="shortcut icon" href="images/fav.ico">
 		<style type="text/css">
@@ -54,7 +54,7 @@
 			.desktop-only {
 				display: none !important;
 			}
-			h1, h2, h3, h4, h5, h6, header, section, footer {
+			h1, h2, h3, h4, h5, h6, header, section, footer, p, figure, figcaption {
 				display: block;
 				margin: 0;
 				padding: 0;
@@ -233,8 +233,12 @@
 		<noscript><link href="css/landing.css" rel="stylesheet" type="text/css"></noscript>
 		<!--[if lt IE 9]>
 			<script>
-				document.createElement("header");
-				document.createElement("footer");
+				document.createElement('header'); 
+				document.createElement('nav'); 
+				document.createElement('article');
+				document.createElement('section'); 
+				document.createElement('aside'); 
+				document.createElement('footer');
 			</script>
 		<![endif]-->
 		<script>
@@ -246,16 +250,16 @@
 			ga('send', 'pageview');
 		</script>
 		<meta property="og:url" content="https://lorem.tech/thanks.html" />
-		<meta property="og:title" content="Lorem: HTML to Done." />
-		<meta property="og:description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016." />
+		<meta property="og:title" content="Lorem: Thanks!" />
+		<meta property="og:description" content="Thanks for signing up for Lorem. You'll hear from us very soon. In the meantime, connect with us on Twitter @lorem_tech." />
 		<meta property="og:locale" content="en_US">
 		<meta property="og:type" content="website">
 		<meta property="og:image" content="https://lorem.tech/images/share_html_to_done_big.png" />
 		<meta property="og:site_name" content="Lorem Technologies">
 		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:site" content="@lorem_tech">
-		<meta name="twitter:title" content="Lorem: HTML to Done.">
-		<meta name="twitter:description" content="Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016.">
+		<meta name="twitter:title" content="Lorem: Thanks!">
+		<meta name="twitter:description" content="Thanks for signing up for Lorem. You'll hear from us very soon. In the meantime, connect with us on Twitter @lorem_tech.">
 		<meta name="twitter:image" content="https://lorem.tech/images/share_html_to_done.png">
 		<meta name="twitter:creator" content="@lorem_tech">
 		<meta name="twitter:domain" content="lorem.tech">
@@ -272,9 +276,10 @@
 				<h1>Thanks for signing up!</h1>
 				<h2>You'll hear from us very soon. In the meantime, connect with us on Twitter or say hi at <a href="mailto:team@lorem.tech">team@lorem.tech</a></h2>
 			</div>
-			<div class="nav">
-				<a class="desktop-only" href="http://editor.lorem.tech">Beta Login</a>
-				<a class="desktop-only" href="index.html#signup">Sign Up</a>
+			<div class="nav desktop-only">
+				<a href="http://editor.lorem.tech">Beta Login</a>
+				<a href="index.html#signup">Sign Up</a>
+				<a href="blog/index.html">Blog</a>
 			</div>
 		</header>
 		<section id="social">

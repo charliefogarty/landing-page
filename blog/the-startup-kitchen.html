@@ -1,0 +1,524 @@
+<!DOCTYPE html><html lang="en"><head>
+		<title>Lorem: The Startup Kitchen.</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="description" content="Sam, Jacob, and I were leaving full time jobs to launch a company, and were ready to pay our founder ramen dues... until we began looking at our kitchen as a startup.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="../images/fav.ico">
+		<style type="text/css">
+			html, body {
+				margin: 0px;
+				padding: 0px;
+				width: 100%;
+				box-sizing: border-box;
+				position: relative;
+				display: block;
+				overflow-x: hidden;
+			}
+			body {
+				color: black;
+				text-align: center;
+				background: #F8F8F8;
+			}
+			* {
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+			}
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+			a {
+				text-decoration: none;
+			}
+			a:hover {
+				text-decoration: none;
+			}
+			a:focus {
+				outline: none;
+			}
+			input, textarea {
+				outline: none;
+				background: transparent;
+				resize: none;
+				font-family: 'Lato', sans-serif;
+				font-weight: 300;
+				color: white;
+				border: 0;
+			}
+			.mobile-only {
+				display: block !important;
+			}
+			.desktop-only {
+				display: none !important;
+			}
+			h1, h2, h3, h4, h5, h6, header, section, footer, p, figure, figcaption {
+				display: block;
+				margin: 0;
+				padding: 0;
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+			}
+			header.page {
+				height: 60px;
+				background: white;
+				color: black;
+				z-index: 3;
+			}
+			header.page.shadow {
+				box-shadow: 0 2px 2px 0px rgba(233,233,233,0.5);
+			}
+			header.page a.header-logo {
+				display: inline-block;
+				margin-left: 0px;
+				height: 40px;
+				width: 80px;
+				position: relative;
+				overflow: hidden;
+				z-index: 2;
+				margin-top: 10px;
+			}
+			header.page a.header-logo img {
+				width: 100%;
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+			}
+			div.nav {
+				position: absolute;
+				top: 15px;
+				right: 30px;
+				display: block;
+				overflow: hidden;
+			}
+			div.nav a {
+				position: relative;
+				display: inline-block;
+				overflow: hidden;
+				font-size: 14px;
+				font-weight: 300;
+				line-height: 20px;
+				padding: 10px 20px;
+				color: black;
+				letter-spacing: 1.6px;
+				float: right;
+			}
+			div.nav a:hover {
+				color: #1984B3;
+			}
+			.post-hero {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				display: block;
+				overflow: hidden;
+			}
+			.post-hero img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-container {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 0 15px;
+				max-width: 730px;
+				margin: auto;
+			}			
+
+			.post {
+				margin-top: 20vw;
+				padding: 0px 15px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				text-align: left;
+				margin-bottom: 130px;
+				background: white;
+				border-radius: 5px;
+				box-shadow: 0 2px 4px 0 rgba(231, 231, 231, .5);
+			}
+			.post-header {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				padding: 30px 0;
+			}
+			.post-header-who {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				height: 65px;
+			}
+			.post-header-who-pic {
+				position: absolute;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 65px;
+				top: 0px;
+				left: 0px;
+			}
+			.post-header-who-pic img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 65px;
+				border-radius: 35px;
+			}
+			.post-header-who-details {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				height: 65px;
+				width: 100%;
+				padding-left: 85px;
+				font-size: 16px;
+				color: black;
+				font-weight: 300;
+				line-height: 25px;
+			}
+			.post-header-who-name {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-top: 10px;
+			}
+			.post-header-who-job {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-bottom: 10px;
+			}
+			.post-header-when {
+				position: absolute;
+				top: 30px;
+				right: 0;
+				display: block;
+				overflow: hidden;
+				line-height: 18px;
+				font-weight: 300;
+				font-size: 14px;
+				color: #CDCDCD;
+			}
+			.post-body {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				color: black;
+			}
+			.post-section {
+				margin-bottom: 50px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-title {
+				font-size: 24px;
+				line-height: 34px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 700;
+			}
+			.post-section:first-child .post-section-title {
+				font-size: 24px;
+				line-height: 34px;
+			}
+			.post-section-paragraph {
+				font-size: 18px;
+				line-height: 26px;
+				margin-top: 20px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+			}
+			.post-section-paragraph a {
+				color: #1984B3;
+			}
+			.post-section-figure {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				margin-top: 30px;
+				text-align: center;
+			}
+			.post-section-figure-image {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-figure-image img {
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+			}
+			.post-section-figure-caption {
+				line-height: 26px;
+				position: relative;
+				display: block;
+				overflow: hidden;
+				width: 100%;
+				font-weight: 300;
+				font-size: 15px;
+				color: #111111;
+				font-style: italic;
+			}
+			@media (min-width: 640px) {
+				.mobile-only {
+					display: none !important;
+				}
+				.desktop-only {
+					display: block !important;
+				}
+				header.page {
+					height: 70px;
+				}
+				header.page a.header-logo {
+					display: block;
+					margin-left: 20px;
+					height: 50px;
+					width: 100px;
+				}
+				.post {
+					margin-top: 15vw;
+					padding: 10px 50px;
+				}
+				.post-section-title {
+					font-size: 28px;
+					line-height: 38px;
+				}
+				.post-section:first-child .post-section-title {
+					font-size: 34px;
+					line-height: 44px;
+				}
+				.post-section-paragraph {
+					font-size: 20px;
+					line-height: 30px;
+					margin-top: 30px;
+				}
+				.post-section-figure-caption {
+					line-height: 30px;
+				}
+			}
+		</style>
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:300,700" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet" type="text/css"></noscript>
+		<link rel="preload" href="../css/blog.css" as="style" onload="this.rel='stylesheet'">
+		<noscript><link href="../css/blog.css" rel="stylesheet" type="text/css"></noscript>
+		<!--[if lt IE 9]>
+			<script>
+				document.createElement('header'); 
+				document.createElement('nav'); 
+				document.createElement('article');
+				document.createElement('section'); 
+				document.createElement('aside'); 
+				document.createElement('footer');
+			</script>
+		<![endif]-->
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-72388809-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<meta property="og:url" content="https://lorem.tech">
+		<meta property="og:title" content="Lorem: The Startup Kitchen.">
+		<meta property="og:description" content="Sam, Jacob, and I were leaving full time jobs to launch a company, and were ready to pay our founder ramen dues... until we began looking at our kitchen as a startup.">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://lorem.tech/images/blog/the-startup-kitchen/share_hero_big.png">
+		<meta property="og:site_name" content="Lorem Technologies">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@lorem_tech">
+		<meta name="twitter:title" content="Lorem: The Startup Kitchen.">
+		<meta name="twitter:description" content="Sam, Jacob, and I were leaving full time jobs to launch a company, and were ready to pay our founder ramen dues... until we began looking at our kitchen as a startup.">
+		<meta name="twitter:image" content="https://lorem.tech/images/blog/the-startup-kitchen/share_hero.png">
+		<meta name="twitter:creator" content="@lorem_tech">
+		<meta name="twitter:domain" content="lorem.tech">
+		<script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/lorem.tech","sameAs":["https:\/\/www.facebook.com\/loremtech","https:\/\/www.linkedin.com\/company\/lorem-technologies-inc","https:\/\/twitter.com\/lorem_tech"],"name":"Lorem Technologies","logo":"https:\/\/lorem.tech\/images\/logo.png","description":"Lorem analyzes your HTML, builds a visual editor for your site, and provides unbeatable, static hosting. Launching in Fall 2016."}</script>
+		<script type="text/javascript">!function(e){"use strict";var n=function(n,t,o){function i(e){return a.body?e():void setTimeout(function(){i(e)})}function r(){l.addEventListener&&l.removeEventListener("load",r),l.media=o||"all"}var d,a=e.document,l=a.createElement("link");if(t)d=t;else{var s=(a.body||a.getElementsByTagName("head")[0]).childNodes;d=s[s.length-1]}var f=a.styleSheets;l.rel="stylesheet",l.href=n,l.media="only x",i(function(){d.parentNode.insertBefore(l,t?d:d.nextSibling)});var u=function(e){for(var n=l.href,t=f.length;t--;)if(f[t].href===n)return e();setTimeout(function(){u(e)})};return l.addEventListener&&l.addEventListener("load",r),l.onloadcssdefined=u,u(r),l};"undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this);</script>
+		<script type="text/javascript">!function(t){if(t.loadCSS){var e=loadCSS.relpreload={};if(e.support=function(){try{return t.document.createElement("link").relList.supports("preload")}catch(e){return!1}},e.poly=function(){for(var e=t.document.getElementsByTagName("link"),n=0;n<e.length;n++){var r=e[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(t.loadCSS(r.href,r),r.rel=null)}},!e.support()){e.poly();var n=t.setInterval(e.poly,300);t.addEventListener&&t.addEventListener("load",function(){t.clearInterval(n)}),t.attachEvent&&t.attachEvent("onload",function(){t.clearInterval(n)})}}}(this);</script>
+	</head>
+	<body>
+		<header class="page">
+			<a href="../index.html" class="header-logo">
+				<img alt="Lorem Logo" src="../images/lorem_logo_dark.png">
+			</a>
+			<div class="nav desktop-only">
+				<a href="http://editor.lorem.tech">Beta Login</a>
+				<a href="../index.html#signup">Sign Up</a>
+				<a href="index.html">Blog</a>
+			</div>
+		</header>
+		<section id="post">
+			<div class="post-hero">
+				<img src="../images/blog/the-startup-kitchen/hero.png" alt="The Startup Kitchen">
+			</div>
+			<div class="post-container">
+				<article class="post">
+					<header class="post-header">
+						<div class="post-header-who">
+							<div class="post-header-who-pic">
+								<img src="../images/blog/charlie_fogarty.png" alt="Charlie Fogarty">
+							</div>
+							<div class="post-header-who-details">
+								<div class="post-header-who-name">Charlie Fogarty</div>
+								<div class="post-header-who-job">Co-Founder, COO</div>
+							</div>
+						</div>
+						<div class="post-header-when desktop-only">August 15, 2016</div>
+					</header>
+					<main class="post-body">
+						<section class="post-section">
+							<h1 class="post-section-title">The Startup Kitchen</h1>
+							<p class="post-section-paragraph">
+								It's a classic story -- the startup founders who eat ramen noodles while they work around the clock to build their brand-new company. Sam, Jacob, and I were leaving full time jobs to launch a company, and were ready to pay our founder ramen dues... until we began looking at our kitchen as a startup.
+								<br><br>
+								Quoting Eric Ries, "A startup is a human institution designed to create a new product or service under conditions of extreme uncertainty." In this case, the startup kitchen is the same thing, except instead of a product, it creates food and you are your own customer.
+								<br><br>
+								Like a young company, a startup kitchen operates with a strict and highly frugal budget. Every dollar spent on food is a dollar that is not spent on something else. Just like any other business expense, we aim to maximize the output of each dollar spent. Overspending on food is obviously an inefficient way to deploy capital, but every organization may see a different output per dollar spent on food. If you're Elon Musk (<a href="http://www.businessinsider.com/elon-musk-living-off-a-dollar-a-day-startalk-2015-3" target="_blank">who lived on a food budget of $1 / day in 1990</a>), here's what your gains to food quality graph might look like:
+							</p>
+							<figure class="post-section-figure">
+								<div class="post-section-figure-image">
+									<img src="../images/blog/the-startup-kitchen/elon_food_graph.png" alt="Elon Musk Food vs. Outut Graph">
+								</div>
+								<figcaption class="post-section-figure-caption">I mean who knows what he eats for lunch?</figcaption>
+							</figure>
+							<p class="post-section-paragraph">
+								After lots of introspection, here's what the Lorem graph looks like:
+							</p>
+							<figure class="post-section-figure">
+								<div class="post-section-figure-image">
+									<img src="../images/blog/the-startup-kitchen/lorem_food_graph.png" alt="Lorem Food vs. Outut Graph">
+								</div>
+								<figcaption class="post-section-figure-caption">The sweet spot has nothing fancy, but it sure does taste good.</figcaption>
+							</figure>
+							<p class="post-section-paragraph">
+								This curve is important, but like everything, it is subject to the constraints of money and time. The goal here is obvious: minimize the amount of money and time spent on food production while maximizing the productivity gains that result from eating. We've cooked everything you see below and have an average meal cost of $3.12 per person (FYI, Soylent is $2.69 per meal).
+							</p>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">What are the productivity gains?</h1>
+							<p class="post-section-paragraph">
+								We know that the brain consumes 20% of our resting metabolic rate, and that a good balance of calories <a href="http://www.scientificamerican.com/article/thinking-hard-calories/" target="_blank">can help keep you focused</a>. Beyond the obvious, good food is a morale booster. In the early days, a startup feels like family, so coming together around the dinner table is important.
+								<br><br>
+								But are we wasting time while eating? Actually, dinner is our favorite meeting of the day. We take a step back, talk about blockers, goals, strategies, and plans. If cooking with your co-founders sounds like agony and your dinners dissolve into arguments, stop reading and maybe get some new co-founders.
+							</p>
+							<figure class="post-section-figure">
+								<div class="post-section-figure-image">
+									<img src="../images/blog/the-startup-kitchen/food_summer_salad.png" alt="Summer salad">
+								</div>
+								<figcaption class="post-section-figure-caption">Summer salad: spinach, avocado, cucumber, onion, feta, tomato, prosciutto, and olive oil.</figcaption>
+							</figure>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Feedback Loop</h1>
+							<p class="post-section-paragraph">
+								When we finish cooking, we sit around the same table and eat. The chefs taste the meal, and the rest of the team will typically say "this is good" or "this is not good" at some point. Every grocery bill is accounted for, and under-purchased or over-purchased food is noticed. 
+								<br><br>
+								Each trip to the kitchen has been informed by the previous night's feedback and experience. More than the meal, we're always trying to optimize portion size, timing, and clean-up. The chef is "dogfooding" -- using the product (eating the food) constantly. Trips to the market are iterative, learning from the previous week. In other words, the kitchen startup has a tight feedback loop.
+							</p>
+							<figure class="post-section-figure">
+								<div class="post-section-figure-image">
+									<img src="../images/blog/the-startup-kitchen/food_pork_shoulder.png" alt="Slow cooked pork shoulder">
+								</div>
+								<figcaption class="post-section-figure-caption">Slow cooked pork shoulder.</figcaption>
+							</figure>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Teamwork</h1>
+							<p class="post-section-paragraph">
+								There are a certain number of tasks that go into a dinner. The team has become naturally specialized in different tasks, which helps the job get done as best as possible, and helps us avoid reassigning jobs each night. Sam typically decides what we're cooking and chops. I cook the meat and tame the stove. Jacob is our master cleaner. On trips to the market, we divide and conquer, often completing a week of shopping in 10-15 minutes. 
+								<br><br>
+								While we know the drill, we're also always picking up slack. In the kitchen you're highly attuned to the other chefs. You're constantly aware of timing, who needs an extra hand, and how you are making things more efficient or less efficient. Like a production line, you're avoiding downstream bottlenecks and reducing waste whenever possible. 
+								<br><br>
+								While cooking, the team is making numerous small decisions -- consciously or unconsciously to get the job done. When and what are we cooking? What jobs are involved? Who is doing what? Are we roasting or sautéing? Most of the time we agree. When we disagree, we let the person who cares the most make the decision.
+							</p>
+							<figure class="post-section-figure">
+								<div class="post-section-figure-image">
+									<img src="../images/blog/the-startup-kitchen/food_homemade_pasta.png" alt="Homemade Pasta">
+								</div>
+								<figcaption class="post-section-figure-caption">Homemade pasta - not an every week dish but one of the best quality to dollar ratios.</figcaption>
+							</figure>
+						</section>
+						<section class="post-section">
+							<h1 class="post-section-title">Takeaway</h1>
+							<p class="post-section-paragraph">
+								Cook with your team -- there's a lot more to it than just food.
+							</p>
+							<figure class="post-section-figure">
+								<div class="post-section-figure-image">
+									<img src="../images/blog/the-startup-kitchen/food_egg_sandwich.png" alt="Pesto Egg Sandwich">
+								</div>
+								<figcaption class="post-section-figure-caption">The go-to lunch: pesto egg sandwich.</figcaption>
+							</figure>
+						</section>
+					</main>
+					<footer class="post-footer">
+						<h1>share this post</h1>
+						<div class="post-share">
+							<a class="post-share-option" href="https://twitter.com/intent/tweet?text=The Startup Kitchen by @lorem_tech&url=https://lorem.tech/blog/the-startup-kitchen.html" target="_blank">
+								<img src="../images/blog/share_twitter.png" alt="Share on Twitter">
+							</a>
+							<a class="post-share-option" href="https://www.linkedin.com/shareArticle?mini=true&title=The Startup Kitchen&url=https://lorem.tech/blog/the-startup-kitchen.html" target="_blank">
+								<img src="../images/blog/share_linkedin.png" alt="Share on LinkedIn">
+							</a>
+							<a class="post-share-option" href="https://www.facebook.com/sharer.php?u=https://lorem.tech/blog/the-startup-kitchen.html" target="_blank">
+								<img src="../images/blog/share_facebook.png" alt="Share on Facebook">
+							</a>
+							<a class="post-share-option" href="mailto:?subject=The Startup Kitchen&body=https://lorem.tech/blog/the-startup-kitchen.html" target="_blank">
+								<img src="../images/blog/share_email.png" alt="Share via email">
+							</a>
+						</div>
+					</footer>
+				</article>
+			</div>
+		</section>
+		<footer class="page">
+			<a href="../index.html" class="footer-logo desktop-only">
+				<img alt="Lorem Logo Footer" src="../images/lorem_logo_footer.png">
+			</a>
+			<div class="footer-copyright">
+				© 2016 Lorem Technologies Inc.
+			</div>
+			<div class="footer-social desktop-only">
+				<a class="footer-social-link" href="https://twitter.com/Lorem_tech" target="_blank">
+					<img src="../images/twitter.png" alt="Twitter Logo">
+				</a>
+			</div>
+		</footer>
+		<script type="text/javascript">
+			var dataLayer = dataLayer || [];
+			dataLayer.push({"getSetReff" : "v1.0", "setDomain" : ".lorem.tech"});
+		</script>
+		<script type="text/javascript">
+			function getSetReff(){function d(c){return(document.cookie.match("(^|; )"+c+"=([^;]*)")||0)[2]}function f(c,b,a){dd=new Date;dd.setTime(dd.getTime()+864E5*a);e="undefined"!=typeof a?";expires="+dd.toGMTString():"";document.cookie=c+"="+b+e+";domain="+g[0].setDomain+";path=/"}function l(c){return-1!=document.location.search.indexOf(c)?(""+document.location.search.split(c+"=")[1]).split("&")[0]:"not-set"}Array.prototype.filter||(Array.prototype.filter=function(c){if(void 0===this||null===this)throw new TypeError;
+			var a=Object(this),b=a.length>>>0;if("function"!==typeof c)throw new TypeError;for(var d=[],g=2<=arguments.length?arguments[1]:void 0,h=0;h<b;h++)if(h in a){var f=a[h];c.call(g,f,h,a)&&d.push(f)}return d});var g=[],g=dataLayer.filter(function(a){if(a.setDomain)return a});0===g.length&&(g[0]={setDomain:document.location.hostname});var b="undefined"!=typeof d("__sreff")?d("__sreff"):"",k="undefined"!=typeof d("__reff")?d("__reff"):"",a=t__apc=[];__tpc=res__apc=__gsr=__nwss="";__gsr=-1!=document.location.search.indexOf("utm_campaign")||
+			-1!=document.location.search.indexOf("utm_medium")||-1!=document.location.search.indexOf("utm_source")?"//campaign::c:["+l("utm_campaign")+"]m:["+l("utm_medium")+"]s:["+l("utm_source")+"]":document.referrer;__gsr=-1!=document.location.search.indexOf("gclid")?"//campaign::[adwords]":__gsr;__gsr="undefined"==typeof __gsr||""==__gsr||-1!=__gsr.indexOf(g[0].setDomain)?"(direct)":__gsr.split("/")[2];b?(a=b.split("."),a[1]=(new Date).getTime(),a[2]++,b=a.join(".")):(a[0]=a[1]=(new Date).getTime(),a[2]=
+			1,b=a.join("."),__nwss=1);f("__sreff",b);1==__nwss?(res__apc=""!=k?k+"|":"",f("__reff",res__apc+__gsr+"&"+b,730)):(t__apc=k.split("|"),__tpc=t__apc[t__apc.length-1],__tpc=""!=__tpc.split("&")[0]?__tpc.split("&")[0]:__gsr,res__apc=1==t__apc.length?"":t__apc.slice(0,-1).join("|")+"|","(direct)"==__gsr||-1!=__gsr.indexOf(__tpc.split("&")[0])?f("__reff",res__apc+__tpc+"&"+b,730):f("__reff",k+"|"+__gsr+"&"+b,730));return d("__reff")};
+		</script>
+		<script type="text/javascript">
+			getSetReff();
+		</script>
+		<script src="../js/blog.js"></script>
+</body></html>
